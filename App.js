@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Button, Container} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Button} from 'react-native';
 
 
 export default function App() {
