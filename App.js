@@ -16,7 +16,6 @@ export default function App() {
 
 
   const checkWinner = (tempBoard) => {
-    console.log('checkign winners', tempBoard)
     const winningCombos = [
       [0, 1, 2],
       [3, 4, 5],
@@ -28,9 +27,7 @@ export default function App() {
       [2, 4, 6],
     ];
     for (let i = 0; i < winningCombos.length; i++) {
-      console.log(board[i])
       const [a, b, c] = winningCombos[i];
-      console.log(tempBoard[a] , tempBoard[b] , tempBoard[c] )
       if ((tempBoard[a] || tempBoard[b] || tempBoard[c]) !== 'unpressed' && tempBoard[a] === tempBoard[b] && tempBoard[a] === tempBoard[c]) {
         return (tempBoard[a])
       }
@@ -49,8 +46,6 @@ export default function App() {
       if (boardWinner){
         setWinner(boardWinner)
         setScores(scores => ({...scores, [boardWinner] : scores[boardWinner] + 1 }))
-
-        console.log(scores)
       }
       setBoard(newBoard);
 
